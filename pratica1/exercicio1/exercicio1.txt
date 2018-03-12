@@ -1,0 +1,15 @@
+1) No Mac OS X /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents
+
+2)/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/bin
+
+3) javac + (nome do arquivo.java)
+
+4)java + (nome da classe principal)
+
+5) Variaveis de ambiente são variaveis de um sistema operacional que contém informações sobre o sistema, caminhos de diretórios específicos no sistema de arquivos e as preferências do usuarío.
+
+6) Sim, é possivel criar variaveis de ambiente desde que seja administrador e tenha total acesso ao sistema. 
+
+7) No sistema windows o comando para criar as variaveis é: set NomeVariável=valor
+
+8)  É nele que se indica onde que foi instalado o JDK
