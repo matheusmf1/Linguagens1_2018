@@ -2,19 +2,35 @@ package aula4;
 
 public class Conta {
     
-    String numero;
-    String titular;
-    float saldo;
-    String cfp;
+    String numeroConta; 
+    private double saldo;
+    Cliente cliente;
     
-    
-    String visualizarSaldo(){
+    //construtor
+    public Conta (String nConta, double saldo, String nome, String sobrenome, String cpf ){
         
-        return Float.toString(this.saldo);
+        this.saldo = saldo;
+        this.numeroConta = nConta;
+        this.cliente = new Cliente(nome, sobrenome, cpf);
+ 
+    }
+    
+ 
+    public String visualizarSaldo(){
+  
+        return Double.toString(this.saldo);
+        //devolve string
         
     }
     
-    boolean depositar(double valor){
+    public double getSaldo() {
+        
+        return this.saldo;
+        //retorna um double
+      
+    }
+    
+    public boolean depositar(double valor){
         if(valor <= 0){
             System.out.println("Nada a depositar");
             return false;
@@ -25,7 +41,7 @@ public class Conta {
         
     }
     
-    boolean sacar(float valor){
+    public boolean sacar(float valor){
         boolean resp = false;
         if(this.saldo >= valor) {
            
@@ -37,7 +53,7 @@ public class Conta {
     }
  
 
-    boolean transferirDinheiro(Conta destinatario, float valor){
+    public boolean transferirDinheiro(Conta destinatario, float valor){
         boolean resp = false;
         if(this.sacar(valor)){  
             destinatario.depositar(valor);
@@ -46,5 +62,14 @@ public class Conta {
         return resp;
     }
     
+    
+    
+    
+    public String getnumeroConta (){
+        
+        return this.numeroConta;
+    
+    }
+
 }
 
