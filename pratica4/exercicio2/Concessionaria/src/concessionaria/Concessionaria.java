@@ -10,8 +10,8 @@ public class Concessionaria {
          
             f1 = new Funcionarios(680.89);
          
-            f1.venda(80);
-            f1.venda(2);
+            f1.venda(100);
+            f1.venda(160);
            
 
             Funcionarios f2;

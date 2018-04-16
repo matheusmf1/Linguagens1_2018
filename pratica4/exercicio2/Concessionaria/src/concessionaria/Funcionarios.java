@@ -9,7 +9,7 @@ public class Funcionarios {
     private static double totalVendas;
     private static int funcionarios;
 
-   
+   //static é como se fosse variavel global, ela referencia a classe
     
     
     public Funcionarios(double salarioBase){
