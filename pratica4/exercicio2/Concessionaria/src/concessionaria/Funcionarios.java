@@ -3,7 +3,7 @@ package concessionaria;
 
 public class Funcionarios {
     
-    private double salarioBase;
+    protected double salarioBase;
     private double vendaFun;
     
     private static double totalVendas;
