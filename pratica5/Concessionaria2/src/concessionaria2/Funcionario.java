@@ -4,31 +4,32 @@ public class Funcionario {
 
     protected String nome;
     private String senha;
-    
-    protected double salarioBase;
+
+    protected static double salarioBase;
     private static double bonusExtra;
     private static double aliquotaBonus = 0.05;
-    
-    //protected String cpf;
-    
-   //private double vendaFun;
+    private static double salarioMes;
 
-    
-    public Funcionario(String nome, double salarioBase){
-       
+    //private double vendaFun;
+    public Funcionario(String nome, double salarioBase) {
+
         this.nome = nome;
         this.salarioBase = salarioBase;
 
     }
-    
-    
-    public static void calcularBonusExtra(double vendasTotais, double nFuncionarios){
-        Funcionario.bonusExtra = (vendasTotais*aliquotaBonus)/nFuncionarios;
+
+    public static void calcularBonusExtra(double vendasTotais, double nFuncionarios) {
+        Funcionario.bonusExtra = (vendasTotais * aliquotaBonus) / nFuncionarios;
     }
-    
-    
-    public boolean autentica(String senha){
-        if (this.senha == senha){
+
+    public static void calculaSalarioMes() {
+
+        Funcionario.salarioMes = Funcionario.getSalarioBase() + Funcionario.getBonusExtra();
+
+    }
+
+    public boolean autentica(String senha) {
+        if (this.senha == senha) {
             System.out.println("Acesso permitido!");
             return true;
         } else {
@@ -36,24 +37,28 @@ public class Funcionario {
             return false;
         }
     }
-    
-    
-     public void setSalarioBase(double salario, String senha){
-        
-        if(autentica(senha)){
+
+    protected void setSalarioBase(double salario, String senha) {
+        if (autentica(senha)) {
             this.salarioBase = salario;
         }
 
     }
 
+    public String getNome() {
+        return this.nome;
+    }
 
-    public static double getBonusExtra(){
+    public static double getSalarioBase() {
+        return Funcionario.salarioBase;
+    }
+
+    public static double getBonusExtra() {
         return Funcionario.bonusExtra;
     }
-    
-    public double getSalarioBase(){
-        return this.salarioBase;
+
+    public static double getSalarioMes() {
+        return Funcionario.salarioMes;
     }
 
-   
 }
