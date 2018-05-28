@@ -18,13 +18,15 @@ public class Concessionaria2 {
         v1 = new Vendedor("Matheus", 3000.00);
  
         
-     
         v1.setGerenteResponsavel(g1);
+        // vendas
+       
         v1.realizarVenda(149.99);
         v1.realizarVenda(250.00);
         g1.realizarVenda(300.00);
 
-   
+        v1.calcularComissao();
+        
         System.out.println("Gerente do vendedor v1 eh: " + v1.getGerenteResponsavel());
      
         g1.darAumento(800, "teste", v1);
