@@ -4,26 +4,22 @@ package concessionaria2;
 public class Vendedor extends Funcionario {
     
     private double comissao;
-    private double valorVendas;
-    private Vendedor gerenteResponsavel;
-   
-   
+    private  double valorVenda;
+    private Funcionario gerenteResponsavel;
+    
+
     
     public Vendedor (String nome, double salarioBase){
         super(nome,salarioBase);
 
     }
     
-    
-    
-    
-    public void realizarVenda(double valorVenda){
-        this.valorVendas += valorVenda;
-
+    public void realizarVenda(double valor){
+        this.valorVenda += valor;
     }
     
     public void calcularComissao(){
-        this.comissao = 0.02*this.valorVendas + Funcionario.getBonusExtra();
+        this.comissao = 0.02*this.valorVenda + Funcionario.getBonusExtra();
     
     }
 
@@ -34,10 +30,7 @@ public class Vendedor extends Funcionario {
     }
     
     public void setGerenteResponsavel (Gerente g){
-            this.gerenteResponsavel = g;
-            
+        this.gerenteResponsavel = g;          
     }
     
- 
-        
 }
