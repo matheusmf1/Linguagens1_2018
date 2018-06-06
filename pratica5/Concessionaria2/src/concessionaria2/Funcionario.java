@@ -1,15 +1,17 @@
 package concessionaria2;
 
-public class Funcionario {
+public abstract class Funcionario {
 
-    protected String nome;
+    private String nome;
     private double salarioBase;
-    private static double bonusExtra;
-    private static double aliquotaBonus = 0.05;
-    private static double salarioMes;
-    public static int nFuncionario;
-    private static double salario;
+    private double salarioMes;
     
+    public static int nFuncionario;
+    private static double bonusExtra;
+    
+    protected static double totalDeVendas;
+    
+  
  
     
     public Funcionario(String nome, double salarioBase) {
@@ -29,27 +31,18 @@ public class Funcionario {
         return this.salarioBase;
     }
 
-    public void setSalarioBase(double salario) {
-           this.salarioBase = salario;
+    protected void setSalarioBase(double salario) {
+        this.salarioBase = salario;
+           
         }
     
+  
        
-    public static void calcularBonusExtra(double vendasTotais, double nFuncionarios) {
-        Funcionario.bonusExtra = (vendasTotais * aliquotaBonus) / nFuncionarios;
-    }
-
-    public void calculaSalarioMes() {
-           
-        Funcionario.salarioMes = this.getSalarioBase() + Funcionario.getBonusExtra();
-
-    }
-    
     public static double getBonusExtra() {
+        Funcionario.bonusExtra = ((Funcionario.totalDeVendas * 0.05) / Funcionario.nFuncionario);
+//        System.out.println("Bonus Extra eh de: " + Funcionario.bonusExtra);
         return Funcionario.bonusExtra;
-    }
 
-    public static double getSalarioMes() {
-        return Funcionario.salarioMes;
     }
 
 }
