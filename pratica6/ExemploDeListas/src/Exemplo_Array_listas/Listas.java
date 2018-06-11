@@ -13,7 +13,7 @@ public class Listas {
        arrList.add("Vai 2");
        arrList.add("Vai 3");
        
-       // ArrayList<item> ListaC  = new ArrayList<item>;
+        //ArrayList<item> ListaC  = new ArrayList<item>;
        //ListaC.add(new item ("",preco);
        //ou listaC.add(item,preco);
        
