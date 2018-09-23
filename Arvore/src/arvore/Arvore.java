@@ -24,6 +24,8 @@ public class Arvore {
 //        Esse método é definido pela interface java.lang.Comparable. 
 //        Ou, ainda, pode se passar um Comparator para seu construtor.
 
+//        A ordem eh comparada por ordem crescente do id
+
         TreeSet<Dados> tree = new TreeSet<Dados>();
         tree.add(new Dados(1,"Matheus"));
         tree.add(new Dados(10,"Cobre"));
