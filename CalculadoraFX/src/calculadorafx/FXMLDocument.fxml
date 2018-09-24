@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="210.0" prefWidth="412.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="calculadorafx.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="25.0" layoutY="30.0" onAction="#soma" text="+" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="button1" layoutX="26.0" layoutY="72.0" onAction="#menos" text="-" />
+      <Button fx:id="button11" layoutX="26.0" layoutY="115.0" onAction="#mult" text="*" />
+      <Button fx:id="button111" layoutX="27.0" layoutY="158.0" onAction="#div" text="/" />
+      <TextField fx:id="textField1" layoutX="123.0" layoutY="45.0" promptText="Digite o 1º numero" />
+      <TextField fx:id="textField2" layoutX="123.0" layoutY="92.0" promptText="Digite o 2º numero" />
+    </children>
+</AnchorPane>

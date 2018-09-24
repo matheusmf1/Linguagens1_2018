@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="429.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coleção.de.itens.FXMLDocumentController">
+    <children>
+      <Accordion />
+    <TitledPane animated="false" layoutX="13.0" layoutY="14.0" prefHeight="239.0" prefWidth="202.0" text="Cadastro Usuario">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtNome" layoutX="17.0" layoutY="14.0" onAction="#handleButtonAction" promptText="nome" />
+                  <TextField fx:id="txtEmail" layoutX="17.0" layoutY="50.0" promptText="email" />
+                  <TextField fx:id="txtTelefone" layoutX="17.0" layoutY="90.0" promptText="telefone" />
+                    <Button fx:id="button" layoutX="27.0" layoutY="127.0" onAction="#handleButtonAction" text="Cadastrar Usuario" />
+                  <Button fx:id="button1" layoutX="24.0" layoutY="166.0" onAction="#showUsers" text="Vizualizar Usuarios" />
+               </children>
+            </AnchorPane>
+      </content>
+    </TitledPane>
+        <Label fx:id="label" layoutX="8.0" layoutY="295.0" minHeight="16" minWidth="48.0" onDragDetected="#showUsers" prefHeight="279.0" prefWidth="282.0" />
+      <Accordion layoutX="264.0" layoutY="37.0" />
+    <TitledPane animated="false" layoutX="264.0" layoutY="14.0" prefHeight="239.0" prefWidth="202.0" text="Cadastro de Item">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtNomeItem" layoutX="17.0" layoutY="14.0" promptText="Nome do Item" />
+                  <Button layoutX="33.0" layoutY="79.0" mnemonicParsing="false" onAction="#addItem" text="Casdastrar Item" />
+                  <Button layoutX="62.0" layoutY="123.0" mnemonicParsing="false" onAction="#showItems" text="Itens" />
+               </children>
+            </AnchorPane>
+      </content>
+    </TitledPane>
+    </children>
+</AnchorPane>
