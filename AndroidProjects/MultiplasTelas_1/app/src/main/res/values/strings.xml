@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MultiplasTelas_1</string>
+    <string name="hint_tela_1">Put your text here</string>
+    <string name="button_text">Press Here to Change Page</string>
+    <string name="button_dial_test">Dial Phone</string>
+    <string name="button_message_text">Message Button</string>
+    <string name="naoTemActivity" translatable="false">I\'m sorry but...</string>
+    <string name="hello_msg">Hello</string>
+</resources>

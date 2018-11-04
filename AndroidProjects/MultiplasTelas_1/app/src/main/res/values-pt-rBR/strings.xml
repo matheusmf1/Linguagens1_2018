@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MultiplasTelas_1</string>
+    <string name="hint_tela_1">Digite seu texto aqui</string>
+    <string name="button_text">Precione aqui para trocar de tela</string>
+    <string name="button_dial_test">Discar telefone</string>
+    <string name="button_message_text">Mensagens</string>
+    <string name="hello_msg">"Oii "</string>
+</resources>
