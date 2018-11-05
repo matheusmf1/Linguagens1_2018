@@ -39,8 +39,12 @@ public class AdapterItemParaMostrar extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View nossoview;
+//        Infla os componentes, para ocupar a view (quem vai inflar,onde vai,false)
         nossoview = activity.getLayoutInflater().inflate(R.layout.layout_items_view,viewGroup,false);
+
         ItemParaMostrar item = lista.get(i);
+
+//        PEGA AS INFORMACOES DO XML LAYOUT_ITEMS_VIEW
         ImageView imageView = (ImageView) nossoview.findViewById(R.id.listitem_image);
         TextView nome = (TextView) nossoview.findViewById(R.id.listitem_nome);
         TextView valor = (TextView) nossoview.findViewById(R.id.listitem_valor);

@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class ItemParaMostrar implements Serializable {
+//    Para mantar byte a byte as informacoes implementar tal interface
 
     @PrimaryKey (autoGenerate = true)
     private int uid;
