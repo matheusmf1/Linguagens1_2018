@@ -16,6 +16,7 @@ public class DetalhesActivity extends Activity {
     }
 
     public void enviarDados(View view) {
+
         CheckBox cbHardware = (CheckBox) findViewById(R.id.cbHardware);
         EditText etNome = (EditText) findViewById(R.id.etNome);
         EditText etPlataforma = (EditText) findViewById(R.id.etPlataforma);

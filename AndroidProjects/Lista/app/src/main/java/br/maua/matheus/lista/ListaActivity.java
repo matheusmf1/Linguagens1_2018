@@ -3,6 +3,7 @@ package br.maua.matheus.lista;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -20,28 +21,22 @@ public class ListaActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
+//        CRIA A LISTA QUANDO O APP EH INICIALIZADO
         listaDePedidos = new ArrayList<>();
         lista = (ListView) findViewById(R.id.listaPedidos);
+
         insereDummyData();
         atualizaLista();
-
-    }
-
-    public void mudarTela(){
-        Intent intent = new Intent(this,DetalhesActivity.class);
-        startActivityForResult(intent,REQUEST_DETALHES);
-
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == REQUEST_DETALHES){
             Pedido p = (Pedido) data.getSerializableExtra("OBJETO");
             listaDePedidos.add(p);
             atualizaLista();
         }
         super.onActivityResult(requestCode, resultCode, data);
-
     }
 
     private void insereDummyData(){
@@ -69,8 +64,13 @@ public class ListaActivity extends Activity {
     }
 
     private void atualizaLista(){
-
-        ArrayAdapter adapter = new ArrayAdapter<Pedido>(this,android.R.layout.simple_list_item_1,listaDePedidos);
+        ArrayAdapter adapter = new ArrayAdapter<Pedido>(
+                this,android.R.layout.simple_list_item_1, listaDePedidos);
         lista.setAdapter(adapter);
+    }
+
+    public void mudarTela(View view) {
+        Intent intent = new Intent(this, DetalhesActivity.class);
+        startActivityForResult(intent, REQUEST_DETALHES);
     }
 }
