@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Atividade4</string>
+    <string name="digite_seu_usuario">Digite seu usuário</string>
+    <string name="bem_vindo_a_loja">BEM VINDO A LOJA!</string>
+    <string name="login">Login</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="insira_o_valor">Insira o valor</string>
+    <string name="insira_o_tipo">Insira o tipo</string>
+    <string name="insira_o_nome">Insira o nome</string>
+    <string name="nome">Nome:</string>
+    <string name="tipo">Tipo:</string>
+    <string name="valor">Valor:</string>
+    <string name="insira_o_login">Insira o login</string>
+    <string name="insira_a_senha">Insira a senha</string>
+</resources>
